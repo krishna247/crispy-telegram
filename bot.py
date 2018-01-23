@@ -27,7 +27,7 @@ def inlinequery(bot, update):
     query = update.inline_query.query
     search_url_template = "https://maps.googleapis.com/maps/api/place/autocomplete/json?input="
     query = quote(query)
-    api_key = "AIzaSyBMv1SfBo6h69hSz0Kf1t7tTg-muLsleEw"
+    api_key = "<YOUR API KEY>"
     search_url = search_url_template+query+"&key="+api_key
     data= requests.get(search_url).json()
     queryResults = []
@@ -56,8 +56,8 @@ def inlinequery(bot, update):
 def main():
     # Create the Updater and pass it your bot's token.
     
-    ###updater = Updater("316762531:AAH1w6OXZevLZ5gl-EdWpGOQaqKiN9m7sVk")@Kri2_bot
-    updater = Updater("507573347:AAHXt_ziMRRYkaKHTMCIHS3olUKJsrUYDco")#@findmapbot
+    
+    updater = Updater("<YOUR TOKEN>")#@findmapbot
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
